@@ -1,0 +1,18 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+}
+:root{
+--clr-white: hsl(0, 0%, 100%);
+--clr-blue: hsla(241, 26%, 48%, 0.568);
+--clr-bg:hsl(244, 15%, 81%);
+}
+body{
+background-color: var(--clr-bg);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+background-color: var(--clr-blue);
+
+}
