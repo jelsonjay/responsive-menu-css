@@ -16,13 +16,58 @@ background-color: var(--clr-bg);
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/*=============Hero===========*/
+/*img{
+width: 100%;
+}*/
+
+.hero{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgb(25, 12, 41);
+}
+.slider{
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+.imgs{
+display: flex;
+width: 60%;
+}
+.imgs img{
+height: 500px;
+width: 100%;
+transition: all 0.15s ease;
+}
+.imgs input{
+display: none;
+}
+.dots{
+display: flex;
+justify-content: center;
+margin: 15px;
+}
+.dots label{
+height: 20px;
+width: 20px;
+border-radius: 50%;
+border: 1px solid #fff;
+transition: all 0.15 ease;
+}
+
+
+
+
+/*=============Header===========*/
 header{
 background-color: var(--clr-blue);
 box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 position: fixed;
 width: 100%;
 z-index: 3;
-
 }
 header ul{
 color: var(--clr-black);
