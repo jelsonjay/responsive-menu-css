@@ -9,6 +9,7 @@ box-sizing:border-box;
 --clr-bg:hsl(244, 15%, 81%);
 --clr-black: hsl(0, 0%, 10%);
 --clr-coral: hsl(16, 100%, 66%);
+--clr-salmon: hsl(6, 93%, 71%);
 }
 body{
 background-color: var(--clr-bg);
@@ -28,10 +29,74 @@ color: var(--clr-black);
 overflow: hidden;
 list-style: none;
 }
-header a ul{
+header ul a{
 display: block;
 text-decoration: none;
 padding: 20px;
 outline: 1px solid coral;
 border: 1px solid hsl(16, 100%, 66%);
+}
+header ul a:hover{
+background-color: var(--clr-coral);
+}
+header .logo{
+display: block;
+float: left;
+padding: 20px 10px;
+font-size: 1.25rem;
+}
+header .nav{
+clear: both;
+max-height: 0;
+transition: max-height .2s ease-in-out;
+}
+header .label-menu{
+padding: 28px 20px;
+position: relative;
+float: right;
+cursor: pointer;
+}
+header .label-menu .label-icon{
+background-color: #000;
+display: block;
+width: 18px;
+height: 2px;
+position: relative;
+transition: background .2s ease-in-out;
+}
+header .label-menu .label-icon::before{
+content: "";
+background-color: #000;
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+transition: all .2s ease-in-out;
+top: 5px;
+}
+header .label-menu .label-icon::after {
+content: "";
+background-color: #000;
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+transition: all .2s ease-in-out;
+top: -5px;
+}
+header .toggle-menu{
+display: none;
+}
+header .toggle-menu:checked ~ .nav{
+max-height: 250px;
+}
+header .toggle-menu:checked~.label-menu .label-icon {
+
+}
+header .toggle-menu:checked~.label-menu .label-icon::before {
+transform: rotate(-45deg);
+}
+
+header .toggle-menu:checked~.label-menu .label-icon::after {
+transform: rotate(45deg);
 }
